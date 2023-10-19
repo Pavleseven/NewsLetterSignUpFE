@@ -1,0 +1,224 @@
+:root {
+  /* Neutral */
+  --DarkSlateGrey: hsl(234, 29%, 20%);
+  --CharcoalGrey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+  /* Primary */
+  --Tomato: hsl(4, 100%, 67%);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: var(--DarkSlateGrey);
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Style */
+
+.card-signup {
+  background-color: var(--White);
+  display: grid;
+  gap: 0.5rem;
+  max-width: 800px;
+  transition: all 1s;
+}
+
+.card-text {
+  display: grid;
+  gap: 1rem;
+}
+.card-content {
+  padding: 1rem 2rem 1rem 1.5rem;
+  color: var(--DarkSlateGrey);
+  /* font-weight: 700; */
+  display: grid;
+  gap: 1rem;
+}
+
+h1 {
+  font-size: 36px;
+  color: var(--DarkSlateGrey);
+  font-weight: 700;
+}
+
+.card-checkmarks {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 0.7rem;
+}
+.img-checkmarks {
+  display: flex;
+
+  gap: 1rem;
+}
+.img-checkmarks > img {
+  width: 20px;
+  height: 20px;
+}
+
+.card-input {
+  /* padding: 1rem 2rem 1rem 1.5rem; */
+  display: grid;
+  gap: 0.5rem;
+}
+
+.input-description {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--DarkSlateGrey);
+  align-items: center;
+}
+.error {
+  color: var(--Tomato);
+  opacity: 0;
+  transition: all 1s;
+}
+
+.input-style {
+  padding: 0.5rem;
+  border: 1px solid var(--Grey);
+  border-radius: 0.3rem;
+  font: inherit;
+}
+
+input[type='text'] {
+  color: var(--Tomato);
+}
+
+::placeholder {
+  color: var(--Grey);
+  padding: 1rem;
+  font-size: 14px;
+}
+
+.btn {
+  padding: 0.7rem;
+  margin: 0rem 0rem 1rem 0rem;
+  color: var(--White);
+  font-weight: 700;
+  background-color: var(--DarkSlateGrey);
+  font-family: inherit;
+  font-size: 14px;
+  border: 0;
+  border-radius: 0.3rem;
+}
+
+.btn:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(232, 60, 119, 1) 12%,
+    rgba(203, 98, 13, 1) 66%
+  );
+}
+/* .card-signup:hover {
+  max-width: 900px;
+} */
+
+@media screen and (min-width: 600px) {
+  .card-signup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 2rem;
+  }
+  .card-img {
+    padding: 1rem;
+  }
+  .card-content {
+    grid-row-start: 1;
+    padding: 5rem 1rem 3rem 3rem;
+    font-size: 14px;
+  }
+  .btn {
+    padding: 0;
+    max-height: 45px;
+  }
+  .input-style {
+    padding: 0;
+    font: inherit;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+}
+
+/* Thank you message style */
+
+.card-signup2 {
+  background-color: var(--White);
+  display: grid;
+  gap: 0.5rem;
+  max-width: 400px;
+  border-radius: 2rem;
+  opacity: 1;
+  transition: all 1s;
+}
+
+.card-content2 {
+  display: grid;
+
+  gap: 2rem;
+
+  padding: 3rem 3rem 1rem 3rem;
+}
+.card-text2 > h1 {
+  line-height: 1;
+}
+
+.card-text2 {
+  text-align: left;
+  display: grid;
+  gap: 1rem;
+}
+
+.email {
+  font-weight: 700;
+}
+
+.btn-thanks {
+  padding: 0.7rem;
+  margin-bottom: 1;
+}
+
+.show {
+  opacity: 1;
+}
